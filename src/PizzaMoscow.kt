@@ -5,13 +5,10 @@ class PizzaMoscow(
     neopolitanPizzaPrice, romanPizzaPrice,
     sicilianPizzaPrice, tyroleanPizzaPrice,
 ), ChekPhoto {
-
-    var photoCount = 0
     override fun photoStatistic() {
         println("Колличество проданных напитков: $photoCount")
         println("Всего заработано денег: ${photoCount*50}")
     }
-
 
     override fun showChekPhoto() {
         println("У вас есть фотография чека?")
@@ -21,7 +18,10 @@ class PizzaMoscow(
                 println("Вам будет скидка 50 рублей с покупки")
                 photoCount++
             }
-            "0" -> photoStatistic()
+            "2" -> notphotoCount++
+            "0" -> {
+                photoStatistic()
+            }
         }
 
     }
