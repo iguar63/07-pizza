@@ -18,11 +18,8 @@ class PizzaPeter(
                 println("с вас 200 рублей")
                 drinkCount++
             }
-
             "2" -> notdrinkCount++
-            "0" -> {
-                drinkStatistic()
-            }
+            "0" -> drinkStatistic()
         }
     }
 

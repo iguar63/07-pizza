@@ -14,7 +14,7 @@ class PizzaMoscow(
         println("У вас есть фотография чека?")
         println("1. Да \n2. Нет \n0. Статистика")
         when (readln()) {
-            "1" -> {
+            "1" -> {photoCount++
                 println("Вам будет скидка 50 рублей с покупки")
                 photoCount++
             }

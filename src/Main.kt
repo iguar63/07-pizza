@@ -1,5 +1,4 @@
 import kotlin.system.exitProcess
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -24,11 +23,9 @@ fun main() {
             "1" -> pizzaMoscow
             "2" -> pizzaPeter
             "3" -> pizzaKazan
-                "0"
-
-            -> break
+                "0" -> break
             else -> {
-                println("ERROR")
+                println("Ты ошибся пиши цифры и от нуля до трех, да они еще должны быть целыми, ну всмыслу цифры")
                 continue
             }
         }
@@ -55,11 +52,10 @@ fun main() {
                 currentPizzaCity.tyrolcanPizzaSale()
                 selectAddService(currentPizzaCity)
             }
-
             "0" -> currentPizzaCity.showStatistics()
             else -> {
                 println("ERROR")
-                exitProcess(1)
+                continue
             }
         }
         when (currentPizzaCity) {
@@ -73,8 +69,6 @@ fun main() {
         }
     }
 }
-
-
 fun selectAddService(currentPizzaCity: PizzaCity) {
     when (currentPizzaCity) {
         is Suase -> currentPizzaCity.suaseSale()

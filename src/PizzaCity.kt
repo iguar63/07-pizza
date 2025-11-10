@@ -25,9 +25,9 @@ abstract class PizzaCity(
 
         val money = neapolitanPizzaCount * neapolitanPizzaPrice + romanPizzaCount * romanPizzaPrice +
                 sicilianPizzaCount * sicilianPizzaPrice + tyrolcanPizzaCount * tyrolcanPizzaPrice + drinkCount*200 - photoCount*50 + suaseCount*60
-       println("Процент людей взявших напиток:${(drinkCount/(drinkCount+notdrinkCount))*100}")
-       println("Процент людей показавших чек:${(photoCount/(photoCount+notdrinkCount))*100}")
-       println("Процент людей всявших соус:${(suaseCount/(suaseCount+notsuaseCount))*100}")
+       println("Процент людей взявших напиток:${(drinkCount/(drinkCount+(notdrinkCount)))*100}")
+       println("Процент людей показавших чек:${(photoCount/(photoCount+(notphotoCount)))*100}")
+       println("Процент людей всявших соус:${(suaseCount/(suaseCount+(notsuaseCount)))*100}")
         println("Всего заработано денег: $money")
     }
 }

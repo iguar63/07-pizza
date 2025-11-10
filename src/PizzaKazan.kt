@@ -9,7 +9,6 @@ class PizzaKazan(
     var chezzesauseCount = 0
     var sichuansuaseCount = 0
 
-
     override fun suaseSale() {
         println("Вы будету соус?")
         println("1. Да \n2. Нет \n0. Cтатистика")
@@ -51,9 +50,7 @@ class PizzaKazan(
             }
 
             "2" -> notdrinkCount++
-            "0" -> {
-                drinkStatistic()
-            }
+            "0" -> drinkStatistic()
         }
     }
 
@@ -70,9 +67,9 @@ class PizzaKazan(
                 println("Вам будет скидка 50 рублей с покупки")
                 photoCount++
             }
+            "2"->notphotoCount++
 
             "0" -> {
-                notphotoCount
                 photoStatistic()
             }
         }
