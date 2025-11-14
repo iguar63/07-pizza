@@ -23,11 +23,18 @@ abstract class PizzaCity(
         println("Продано римской пиццы: $romanPizzaCount")
         println("Продано тирольской пиццы: $tyrolcanPizzaCount")
 
+       var drinkStat = (drinkCount/(drinkCount+(notdrinkCount)+0.01))*100
+       var photoStat = (photoCount/(photoCount+(notphotoCount)+0.01))*100
+       var suaseStat = (suaseCount/(suaseCount+(notsuaseCount)+0.01))*100
+
+       if(drinkStat>=99.0)drinkStat=100.0
+       if(photoStat>=99.0)drinkStat=100.0
+       if(suaseStat>=99.0)drinkStat=100.0
         val money = neapolitanPizzaCount * neapolitanPizzaPrice + romanPizzaCount * romanPizzaPrice +
                 sicilianPizzaCount * sicilianPizzaPrice + tyrolcanPizzaCount * tyrolcanPizzaPrice + drinkCount*200 - photoCount*50 + suaseCount*60
-       println("Процент людей взявших напиток:${(drinkCount/(drinkCount+(notdrinkCount)))*100}")
-       println("Процент людей показавших чек:${(photoCount/(photoCount+(notphotoCount)))*100}")
-       println("Процент людей всявших соус:${(suaseCount/(suaseCount+(notsuaseCount)))*100}")
+       println("Процент людей взявших напиток:${drinkStat}")
+       println("Процент людей показавших чек:${photoStat}")
+       println("Процент людей всявших соус:${suaseStat}")
         println("Всего заработано денег: $money")
     }
 }

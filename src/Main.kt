@@ -58,15 +58,6 @@ fun main() {
                 continue
             }
         }
-        when (currentPizzaCity) {
-            is Suase -> {
-                pizzaKazan.suaseSale()
-                pizzaKazan.drinkSale()
-                pizzaKazan.showChekPhoto()
-            }
-            is ChekPhoto -> pizzaMoscow.showChekPhoto()
-            else -> pizzaPeter.drinkSale()
-        }
     }
 }
 fun selectAddService(currentPizzaCity: PizzaCity) {
