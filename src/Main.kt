@@ -55,16 +55,16 @@ fun main() {
             "0" -> currentPizzaCity.showStatistics()
             else -> {
                 println("ERROR")
-                continue
+                exitProcess(1)
             }
         }
     }
 }
 fun selectAddService(currentPizzaCity: PizzaCity) {
     when (currentPizzaCity) {
-        is Suase -> currentPizzaCity.suaseSale()
         is Drink -> currentPizzaCity.drinkSale()
         is ChekPhoto -> currentPizzaCity.showChekPhoto()
+        is Suase ->  currentPizzaCity.suaseSale()
     }
 }
 
